@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting-Phone</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="bg-black m-5">
+            <input type="text" id="search-field" placeholder="Search here"
+                class="m-4 input input-bordered w-full max-w-xs" />
+            <button onclick="input()" class="btn btn-accent">Search</button>
+        </div>
+    </header>
+    <main class="mx-auto container mt-10">
+        <section>
+            <div class="text-center my-4" id="spinner">
+                <span class="loading loading-spinner loading-lg hidden" id="toggleSpinner"></span>
+            </div>
+            <div id="phone-container" class="m-10 grid grid-cols-3 gap-4">
+            </div>
+            <div id="show-all" class="text-center hidden">
+                <button class="btn btn-secondary mb-5 " onclick="clickedShow()">Show All</button>
+            </div>
+            
+            <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg" id="show-phone-name">Hello!</h3>
+                    <div id="show-details-container">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+
+    </main>
+    <script src="JS/phone.js"></script>
+</body>
+
+</html>
